@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Guideline</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #4b0082;
+      --secondary: #008080;
+      --accent: #ff5722;
+      --bg: #f9fafb;
+      --card: #ffffff;
+      --border: #e0e0e0;
+      --text: #222;
+      --highlight: #eaf4ff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      color: var(--primary);
+      font-size: 2.4rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-top: 30px;
+    }
+
+    .guideline {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .guideline:hover {
+      transform: translateY(-2px);
+    }
+
+    .guideline h2 {
+      font-size: 1.5rem;
+      color: var(--secondary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .guideline h2 img.logo {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: step;
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 48px;
+      margin-bottom: 20px;
+      counter-increment: step;
+    }
+
+    li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      line-height: 28px;
+      font-weight: bold;
+    }
+
+    li:hover {
+      background-color: rgba(75, 0, 130, 0.05);
+      border-radius: 6px;
+      padding: 8px 12px 8px 48px;
+    }
+
+    .guideline img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin: 15px 0;
+    }
+
+    .email {
+      font-family: monospace;
+      background-color: var(--highlight);
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: var(--secondary);
+    }
+
+    .note,
+    .warning {
+      margin: 20px 0;
+      padding: 16px;
+      border-left: 5px solid;
+      border-radius: 6px;
+    }
+
+    .note {
+      background-color: #fffde7;
+      border-color: #fbc02d;
+    }
+
+    .warning {
+      background-color: #ffebee;
+      border-color: var(--accent);
+    }
+
+    .time {
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      font-size: 0.95rem;
+      color: #777;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .guideline {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>User Guideline</h1>
+  </header>
+
+  <div class="container">
+    <div class="guideline">
+      <h2><img src="img/Thunderbird_2023_icon.png" class="logo" alt="Thunderbird Logo"> Mozilla Thunderbird</h2>
+      <ol>
+        <li>Open Thunderbird and go to <strong>Account Settings</strong> from the menu or by right-clicking your account.</li>
+        <img src="img/Mozilla step1.png" alt="Step 1" />
+        <li>Click <strong>"Manage Identities"</strong> button.</li>
+        <img src="img/Mozilla Step2.jpg" alt="Step 2" />
+        <li>
+          In the identity window:
+          <ul>
+            <li>Click "Add"</li>
+            <li>Set email to <span class="email">demo@your-name.com</span></li>
+          </ul>
+        </li>
+        <img src="img/Mozilla step3.png" alt="Step 3" />
+        <li>Click "OK" and restart Thunderbird.</li>
+        <img src="img/Mozilla step4.jpg" alt="Step 4" />
+      </ol>
+      <div class="note">
+        <strong>Note:</strong> Thunderbird may take a few minutes to fully apply changes.
+      </div>
+    </div>
+    <div class="guideline">
+      <h2><img src="img/Outlook logo.jpg" class="logo" alt="Outlook Logo"> Microsoft Outlook</h2>
+      <ol>
+        <li>Go to <strong>File &gt; Account Settings</strong>.</li>
+        <img src="img/Outlook step1.png" alt="Outlook Step 1" />
+        <li>Select your account, then click <strong>"Change"</strong>.</li>
+        <img src="img/Outlook step2.png" alt="Outlook Step 2" />
+        <li>
+          In the new window:
+          <ul>
+            <li>Click <strong>"More Settings"</strong></li>
+            <li>Open <strong>"Send As"</strong> tab</li>
+            <li>Set email to <span class="email">demo@your-name.com</span></li>
+          </ul>
+        </li>
+        <img src="img/Outlook step3.png" alt="Outlook Step 3" />
+        <li>Click OK → Next → Finish. Restart Outlook.</li>
+        <img src="img/Outlook step4.png" alt="Outlook Step 4" />
+      </ol>
+      <div class="warning">
+        <strong>Important:</strong> You may need administrator access for these changes.
+      </div>
+    </div>
+    <div class="guideline">
+      <h2><img src="img/Gmail_icon.png" class="logo" alt="Gmail Logo"> Google Mail (Gmail)</h2>
+      <ol>
+        <li>Go to <strong>Settings → See all settings → Accounts and Import</strong>.</li>
+        <img src="img/Google mail step1.png" alt="Gmail Step 1" />
+        <li>Click <strong>"Add another email address"</strong>.</li>
+        <img src="img/Google mail step2.png" alt="Gmail Step 2" />
+        <li>
+          Fill out the popup:
+          <ul>
+            <li>Name + <span class="email">demo@your-name.com</span></li>
+            <li>Uncheck "Treat as alias"</li>
+            <li>Click <strong>"Next Step"</strong></li>
+          </ul>
+        </li>
+        <img src="img/Google mail step3.png" alt="Gmail Step 3" />
+        <li>
+          Complete verification:
+          <ul>
+            <li>Check email for code</li>
+            <li>Enter it and click <strong>Verify</strong></li>
+          </ul>
+        </li>
+        <img src="img/Google mail step4.png" alt="Gmail Step 4" />
+        <img src="img/Google mail step5.png" alt="Gmail Verification" />
+        <li>Now you can select the new address when sending emails.</li>
+        <img src="img/Google mail step6.png" alt="Gmail Step 6" />
+      </ol>
+      <div class="note">
+        <strong>Tip:</strong> Verification usually takes <span class="time">1–2 minutes</span>. Check spam if needed.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Last updated: <span id="current-date"></span>
+  </footer>
+
+  <script>
+    document.getElementById("current-date").textContent = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  </script>
+</body>
+
+</html>
